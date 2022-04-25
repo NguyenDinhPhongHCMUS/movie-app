@@ -1,0 +1,107 @@
+@import "scss/varible.scss";
+@import "scss/mixin.scss";
+@import "scss/breakpoint.scss";
+
+.container {
+    .detail-movie {
+        margin-top: 80px;
+        @include flex(row, space-between, flex-start);
+
+        @include phone {
+            @include flex(column, space-between, center);
+        }
+
+        &__img {
+            background-position: center center;
+            background-size: cover;
+            width: 340px;
+            border-radius: 10px;
+
+            @include tablet {
+                width: 280px;
+            }
+
+            @include phone {
+                width: 210px;
+            }
+        }
+
+        &__info {
+            flex: 1;
+            margin-left: 10%;
+
+            &__content {
+                width: 65%;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                &__title {
+                    color: white;
+                    font-size: 60px;
+
+                    @include tablet {
+                        font-size: 40px;
+                    }
+                }
+
+                &__category {
+                    @include category;
+                }
+            }
+
+        }
+    }
+
+    .movie-video {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        margin-top: 20px;
+        overflow: hidden;
+
+        &__iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .movie-episodes {
+        margin-top: 20px;
+
+        &__title {
+            color: #899ead;
+            text-transform: uppercase;
+            margin: 10px 0px;
+        }
+
+        &__list {
+            @include flex(row, none, center);
+            flex-wrap: wrap;
+
+            &__item {
+                opacity: 0.4;
+            }
+
+            .current-episode-active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .home-back {
+        @include flex(row, space-around, center);
+        color: white;
+        background-color: #3898ec;
+        padding: 10px 10px;
+        border-radius: 5px;
+        width: 120px;
+        margin: 20px auto;
+        cursor: pointer;
+
+    }
+}

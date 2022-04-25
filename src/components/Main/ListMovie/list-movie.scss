@@ -1,0 +1,39 @@
+@import "scss/global.scss";
+@import "scss/varible.scss";
+@import "scss/breakpoint.scss";
+@import "scss/mixin.scss";
+
+.movie {
+    margin: 50px auto;
+
+    .movie-main {
+        &__title {
+            margin: 30px 0px 20px 0px;
+            color: $yellow;
+            text-transform: uppercase;
+            font-size: 40px;
+            @include tablet
+            {
+                text-align: center
+            }
+        }
+
+        &__grid {
+            @include flex(row, none, none);
+            flex-wrap: wrap;
+
+            &__item {
+                height: auto;
+                width: 20%;
+
+                @include tablet {
+                    width: 50%;
+                }
+
+                @include phone {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

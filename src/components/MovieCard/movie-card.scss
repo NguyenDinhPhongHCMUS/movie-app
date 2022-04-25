@@ -1,0 +1,76 @@
+@import "scss/varible.scss";
+@import "scss/mixin.scss";
+@import "scss/breakpoint.scss";
+
+.movie-card {
+    margin: 15px auto;
+    padding: 0px 10px 15px 10px;
+    width: 190px;
+    cursor: pointer;
+    @include flex(column, space-between, none);
+    @include tablet {
+        width: 100%;
+        @include flex(column, space-between, center);
+        padding: 0px 40px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    &__img {
+        width: 100%;
+        height: 257px;
+        background-size: cover;
+        border-radius: 6px;
+        background-position: center;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        @include tablet {
+            height: 292px;
+            width: 200px;
+        }
+    }
+
+    &__title {
+        margin: 10px 0px;
+
+        &__content {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            @include tablet {
+                font-size: 26px;
+            }
+        }
+    }
+
+    &__category {
+        @include flex(row, flex-start, center);
+        &__icon {
+            color: $yellow;
+        }
+
+        &__content {
+            color: #cad3da;
+            margin-left: 5px;
+            font-size: 14px;
+            text-decoration: underline;
+
+            &:hover {
+                color: white;
+            }
+
+            @include tablet {
+                font-size: 14px;
+                text-align: left;
+            }
+        }
+    }
+}

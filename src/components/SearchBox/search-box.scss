@@ -1,0 +1,46 @@
+@import "scss/global.scss";
+@import "scss/varible.scss";
+@import "scss/breakpoint.scss";
+@import "scss/mixin.scss";
+
+.search-box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    height: 40px;
+    margin-top: 100px;
+
+    @include tablet {
+        margin-top: 90px;
+        width: 90%;
+    }
+
+    @include flex(row, flex-start, center);
+
+    .search-box__input--text {
+        padding: 0px 10px;
+        flex: 1;
+        height: 100%;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        outline: none;
+        border: 0;
+        font-size: 1.1rem;
+
+        @include tablet {
+            font-size: 16px;
+        }
+    }
+
+    .search-box__input--submit {
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        background-color: #3898ec;
+        height: 100%;
+        border: 0;
+        color: white;
+        padding: 8px 12px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+}

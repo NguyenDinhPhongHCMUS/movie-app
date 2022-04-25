@@ -1,0 +1,13 @@
+@import "scss/varible.scss";
+@import "scss/mixin.scss";
+@import "scss/breakpoint.scss";
+@import "scss/global.scss";
+
+.movie-search-result
+{
+    &__title
+    {
+        color: $yellow;
+    }
+    flex:1; 
+}

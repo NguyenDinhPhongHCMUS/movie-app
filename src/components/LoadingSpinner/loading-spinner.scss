@@ -1,0 +1,35 @@
+@import "scss/global.scss";
+@import "scss/varible.scss";
+@import "scss/breakpoint.scss";
+@import "scss/mixin.scss";
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    width: 160px;
+    height: 160px;
+    border: 10px solid white;
+    border-top: 10px solid #0c2738;
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+
+    @include tablet {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.spinner-container {
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}

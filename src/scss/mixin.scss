@@ -1,0 +1,46 @@
+//mixin flex
+@mixin flex($typeFlex, $justifyContent, $alignItem) {
+    display: flex;
+    flex-direction: $typeFlex;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+}
+
+//mixin the loai phim
+@mixin type-movie {
+    font-size: 1.1rem;
+    font-family: $font-family;
+    font-weight: 400;
+    color: $un-active;
+    cursor: pointer;
+    height: 100%;
+
+    &:hover {
+        color: white;
+    }
+}
+
+//mixin position fixed
+@mixin fix($top, $bottom, $right, $left) {
+    position: fixed;
+    top: $top;
+    bottom: $bottom;
+    right: $right;
+    left: $left;
+}
+
+//mixin category
+@mixin category {
+    @include flex(row, none, center);
+    cursor: pointer;
+    &__title {
+        color: #cad3da;
+        margin-left: 5px;
+        font-size: 15px;
+        text-decoration: underline;
+    }
+
+    &__icon {
+        color: $yellow;
+    }
+}

@@ -1,0 +1,13 @@
+@import "scss/global.scss";
+@import "scss/varible.scss";
+@import "scss/breakpoint.scss";
+@import "scss/mixin.scss";
+html {
+    width: 100%;
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    background-color: $main-bg;
+}

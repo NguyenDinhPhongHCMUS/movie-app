@@ -1,0 +1,50 @@
+@import "scss/global.scss";
+@import "scss/varible.scss";
+@import "scss/breakpoint.scss";
+@import "scss/mixin.scss";
+
+.footer {
+    padding: 20px 0px;
+    color: white;
+    background-color: $footer-bg;
+    @include tablet {
+        padding: 20px 10px;
+    }
+
+    &__type {
+        @include flex(column, flex-end, left);
+
+        &__title {
+            margin: 5px 0px;
+            color: white;
+        }
+    }
+
+    &__about-me {
+        text-align: center;
+
+        &__fb {
+            @include flex(row, center, center);
+
+            &__title {
+                color: white;
+            }
+
+            &__icon {
+                color: $yellow;
+                margin-right: 5px;
+            }
+        }
+
+        &__title {
+            @include flex(row, center, center);
+
+            &__icon {
+                width: 3px;
+                height: 18px;
+                background-color: $yellow;
+                margin-right: 5px;
+            }
+        }
+    }
+}

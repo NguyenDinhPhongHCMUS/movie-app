@@ -1,0 +1,9 @@
+@import "scss/varible.scss";
+@import "scss/mixin.scss";
+@import "scss/breakpoint.scss";
+@import "scss/global.scss";
+
+.home {
+    @include flex(column, space-between, none);
+    height: 100vh;
+}

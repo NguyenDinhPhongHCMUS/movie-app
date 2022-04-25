@@ -1,0 +1,41 @@
+@import "scss/varible.scss";
+@import "scss/mixin.scss";
+@import "scss/breakpoint.scss";
+
+.movie-result-card {
+    width: 75%;
+    margin: 20px auto;
+    @include flex(row, none, none);
+    cursor: pointer;
+    @include tablet
+    {
+        flex-direction: column;
+        margin: 40px auto;
+    }
+    &__img {
+        width: 150px;
+        height: 200px;
+        background-size: cover;
+        border-radius: 6px;
+        margin-right: 40px;
+        background-position: center;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &__detail
+    {
+        flex: 1;
+        &__title
+        {
+            color: $yellow;
+            font-size: 30px;
+            @include tablet
+            {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+        }
+        color: #979797;
+    }
+}

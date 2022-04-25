@@ -1,0 +1,106 @@
+@import "scss/global.scss";
+@import "scss/varible.scss";
+@import "scss/breakpoint.scss";
+@import "scss/mixin.scss";
+
+.header {
+    background-color: $header-bg;
+    @include fix(0, none, 0, 0);
+    z-index: 999;
+
+    &-main {
+        @include flex(row, space-between, center);
+
+        @include tablet {
+            align-items: center;
+            padding: 20px 10px;
+        }
+
+        &__img {
+            width: 160px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__nav--lap {
+            height: 100%;
+            display: block;
+
+            @include tablet {
+                display: none;
+            }
+
+            nav {
+                @include flex(row, space-between, center);
+                width: 100%;
+
+                .header-main__nav--lap__title {
+                    margin-left: 38px;
+                    padding: 28px 0px;
+                    @include type-movie;
+                }
+
+                .tab-active {
+                    color: white;
+                    border-bottom: 3px solid $yellow;
+                }
+            }
+        }
+
+        &__nav--tablet {
+            @include fix(0, 0, 0, 100%);
+            background-color: $main-bg;
+            height: 100vh;
+            padding: 40px 40px;
+            transition: all ease 0.4s;
+
+            &__navbar {
+                @include flex(row, flex-end, none);
+                cursor: pointer;
+            }
+
+            &__navbar--icon {
+                display: block;
+                color: white;
+                font-size: 26px;
+            }
+
+            nav {
+                @include flex(column, space-between, none);
+
+                .header-main__nav--tablet__title {
+                    padding: 28px 0px;
+                    @include type-movie;
+                    margin-left: 0;
+                }
+
+                .tab-active {
+                    color: white;
+                    border-bottom: 2px solid $yellow;
+                }
+            }
+        }
+
+        .header-main__navbar {
+            display: none;
+            color: white;
+            font-size: 26px;
+            cursor: pointer;
+
+            @include tablet {
+                display: block;
+            }
+        }
+    }
+
+    .nav-bar-tablet {
+        display: none;
+
+        @include tablet {
+            display: block;
+            @include fix(0, 0, 0, 30%);
+        }
+    }
+}
